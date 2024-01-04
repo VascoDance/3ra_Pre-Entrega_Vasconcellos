@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Formulario{% endblock %}
+
+{% block content %}
+    <h2>Formulario de Datos</h2>
+    <form method="post" action="{% url 'formulario' %}">
+        {% csrf_token %}
+
+         <!-- Formulario para Modelo1 -->
+    <form method="post" action="{% url 'formulario' %}">
+        {% csrf_token %}
+        {{ modelo1_form.as_p }}
+        <button type="submit">Enviar Modelo1</button>
+    </form>
+
+        <!-- Formulario para Modelo2 -->
+    <form method="post" action="{% url 'formulario' %}">
+        {% csrf_token %}
+        {{ modelo2_form.as_p }}
+        <button type="submit">Enviar Modelo2</button>
+    </form>
+
+       <!-- Formulario para Modelo3 -->
+    <form method="post" action="{% url 'formulario' %}">
+        {% csrf_token %}
+        {{ modelo3_form.as_p }}
+        <button type="submit">Enviar Modelo3</button>
+        
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}

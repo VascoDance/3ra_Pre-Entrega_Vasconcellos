@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+</head>
+<style>
+   
+    nav {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+    
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Mi Sitio Web</h1>
+</header>
+<nav>
+    <a href="{% url 'formulario' %}">Formulario</a>
+    <a href="{% url 'busqueda' %}">Búsqueda</a>
+    
+</nav>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<footer>
+    <p>&copy; 2023 Mi Sitio Web</p>
+</footer>
+</body>
+</html>

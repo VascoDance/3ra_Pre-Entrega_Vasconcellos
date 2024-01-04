@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Búsqueda{% endblock %}
+
+{% block content %}
+    <h2>Búsqueda en la Base de Datos</h2>
+    <form method="get" action="{% url 'busqueda' %}">
+        <!-- Coloca aquí los campos de búsqueda -->
+        <input type="text" name="query" placeholder="Buscar">
+        <button type="submit">Buscar</button>
+    </form>
+    <!-- Coloca aquí los resultados de la búsqueda -->
+{% endblock %}
